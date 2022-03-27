@@ -4,6 +4,7 @@
 
 int main()
 {
+	// example state : 508421736 -> solvable
 
 	std::string start;
 	while (start.size() != 9)

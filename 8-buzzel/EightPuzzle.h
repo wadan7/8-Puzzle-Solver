@@ -19,6 +19,5 @@ private:
 private:
 	int m_Start[9];
 	int m_Goal[9];
-	bool m_ShoudClose;
 
 };

@@ -1,11 +1,9 @@
 #include "EightPuzzle.h"
 #include <algorithm>
 #include <vector>
-#include <queue>
-#include <memory>
 #include <cmath>
 #include <iostream>
-#include <stack>
+
 struct Swap_t
 {
 	unsigned int FirstIndex;
@@ -102,7 +100,8 @@ static std::vector<Swap_t> FindAvailableSwaps(const int* state)
 	}
 }
 
-
+// refrence : https://www.geeksforgeeks.org/check-instance-8-puzzle-solvable/
+//////////////////////////////////////////////////////////////////////////////
 static int getInvCount(int arr[])
 {
 	int inv_count = 0;
@@ -123,6 +122,8 @@ static bool isSolvable(int puzzle[9])
 	// return true if inversion count is even.
 	return (invCount % 2 == 0);
 }
+//////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 
 void EightPuzzle::Run()
 {
@@ -132,7 +133,7 @@ void EightPuzzle::Run()
 		std::cout << "this start state is not solvable!!!!" << std::endl;
 }
 
-EightPuzzle::EightPuzzle(int startState[9]): m_ShoudClose(0)
+EightPuzzle::EightPuzzle(int startState[9])
 {
 	int goal[] = {
 		1,2,3,
