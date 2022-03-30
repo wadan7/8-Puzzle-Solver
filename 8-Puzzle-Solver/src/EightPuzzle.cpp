@@ -379,7 +379,7 @@ unsigned int EightPuzzle::CalcHeuristic(const int* state)
 {
 	unsigned int heuristic = 0;
 
-	/*for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 9; i++)
 	{
 		for (int j = 0; j < 9; j++)
 		{
@@ -389,12 +389,12 @@ unsigned int EightPuzzle::CalcHeuristic(const int* state)
 			}
 		}
 	}
-	*/
-	for (int i = 0; i < 9; i++)
+	
+	/*for (int i = 0; i < 9; i++)
 	{
 		if (state[i] != m_Goal[i])
 			heuristic++;
-	}
+	}*/
 	return heuristic;
 }
 
